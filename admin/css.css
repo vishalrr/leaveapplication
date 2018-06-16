@@ -1,0 +1,55 @@
+/*/*
+Styles related DIRECTLY with jQuery-simple-pagination
+*/
+.simple-pagination-page-numbers a
+{
+	display: block;
+	float: left;
+	width: 30px;
+	text-align: center;
+}
+a
+{
+	color: #216ed9;
+	text-decoration: none;
+}
+a[class^="simple-pagination-navigation-"] + a[class^="simple-pagination-navigation-"]
+{
+	margin-right: 0;
+}
+a[class*="simple-pagination-navigation-disabled"]
+{
+	color: black;
+	cursor: default;
+}
+
+/*
+Styles used to page things look nice :)
+*/
+*
+{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+.simple-pagination-first, .simple-pagination-previous, .simple-pagination-next, .simple-pagination-last{
+	    float: left;
+        margin-left: 20px;
+       /* border: 1px solid #216ed9;*/
+	    /*border-radius: px;*/
+	    padding: 4px;
+}
+.simple-pagination-navigation-page{
+	 	float: left;
+        margin-left: 10px;
+        border: 1px solid #216ed9;
+	    border-radius: px;
+	    padding: 4px;
+}
+.simple-pagination-page-numbers{
+	    float: left;
+        margin-left: 10px;
+	    border-radius: 3px;
+}

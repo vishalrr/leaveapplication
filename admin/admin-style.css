@@ -1,0 +1,76 @@
+.add_usr_mdl{
+      background: #c0423f;
+
+}
+
+
+.mdl_title{
+	color:#ffffff;
+}
+
+.mh_pl_ol{
+ background: #c0423f;
+ border: none;	
+}
+
+.mh_pl_ol:hover{
+ background: #c0423f;
+ border: none;	
+}
+
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+ min-height: 350px; 
+ border: 2px solid #757677;
+}
+
+input[type="text"],input[type="email"],input[type="password"]{
+height: 40px;
+font-size:12pt;
+
+	}
+
+.editpg_form .btn_updt{
+ background-color: #757677;
+ border-color: #757677;
+}
+.editpg_form .btn_updt:hover{
+ background-color: #757677;
+ border-color: #757677;
+}
+
+.editpg_form{
+	 min-height: 432px;
+}
+
+.editpg_form  .btn_cancl{
+
+ background-color: #BC423B;
+ border-color: #BC423B;
+}
+.editpg_form  .btn_cancl:hover{
+
+ background-color: #BC423B;
+ border-color: #BC423B;
+}
+.editpg_form .panel-heading h3{
+ font-weight: bold;
+ font-size: 18px;
+ color: #BC423B;
+}
+
+.any-padding{
+	padding-bottom: 18px;
+}
+
+
+@-moz-document url-prefix() {
+.editpg_form {
+    min-height: 449px;
+}
+}
