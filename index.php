@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 session_start();
 
@@ -16,6 +17,32 @@ if(isset($_SESSION['id'])){
 }
 
 $error = "";
+if(isset($_REQUEST['loginBtn']))
+{
+
+$email=$_REQUEST['email'];
+$pass=md5($_REQUEST['password']);
+$conn =mysqli_connect("localhost","id6195385_root","mansa@123","id6195385_mansa");
+$query=  "SELECT * FROM `user` where email='".$email."' and password='".$pass."'" ;
+
+$str=mysqli_query($conn, $query) or mysql_die(mysqli_error($conn));
+$row=mysqli_fetch_array($str);
+
+
+
+if (empty($row)) {
+  
+    $error = 'Incorect Email/Password';
+      
+}
+ elseif ($_SESSION['role'] == 'admin') {
+    header("location:admin/admin.php");
+    # code...
+  }
+  else  {
+    # code...
+    header("location:user/user.php");
+  }
 if(isset($_REQUEST['loginBtn']))
 {
 
@@ -138,3 +165,6 @@ if(!$error && isset($_POST['loginBtn'])){
   </script>
 </body>
 </html>
+<?php 
+ob_flush();
+?>
