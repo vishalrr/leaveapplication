@@ -2,6 +2,8 @@
 ob_start();
 session_start();
 error_reporting(1);
+var_dump(function_exists('mysqli_connect'));
+exit;
 if(isset($_SESSION['id'])){
 
   if($_SESSION['role']== "admin"){
