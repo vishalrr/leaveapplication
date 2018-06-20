@@ -21,8 +21,12 @@ if(isset($_REQUEST['loginBtn']))
 $email=$_REQUEST['email'];
 $pass=md5($_REQUEST['password']);
 $conn =mysqli_connect("fdb21.awardspace.net","2753521_mansa","vishal@123","2753521_mansa");
- var_dump($conn);
-  exit;
+if (!$conn) {
+    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+    exit;
+}
 $query=  "SELECT * FROM `user` where email='".$email."' and password='".$pass."'" ;
 
 $str=mysqli_query($conn, $query) or mysql_die(mysqli_error($conn));
