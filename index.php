@@ -3,7 +3,7 @@
 session_start();
 error_reporting(1);
 
-
+exit;
 if(isset($_SESSION['id'])){
 
   if($_SESSION['role']== "admin"){
