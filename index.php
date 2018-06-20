@@ -1,9 +1,7 @@
 <?php
-
+ob_start();
 session_start();
 error_reporting(1);
-
-exit;
 if(isset($_SESSION['id'])){
 
   if($_SESSION['role']== "admin"){
@@ -139,3 +137,4 @@ if(!$error && isset($_POST['loginBtn'])){
   </script>
 </body>
 </html>
+<?php ob_flush(); ?>
