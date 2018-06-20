@@ -20,7 +20,7 @@ if(isset($_REQUEST['loginBtn']))
 
 $email=$_REQUEST['email'];
 $pass=md5($_REQUEST['password']);
-$conn =mysqli_connect("fdb21.awardspace.net","2753521_mansa","vishal@123","2753521_mansa");
+$conn =mysqli_connect("localhost","id6195385_root","mansa@123","id6195385_mansa");
 if (!$conn) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
