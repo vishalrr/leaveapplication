@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+error_reporting(1);
 
 
 if(isset($_SESSION['id'])){
